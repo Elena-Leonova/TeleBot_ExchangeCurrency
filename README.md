@@ -1,1 +1,1 @@
-# TeleBot_ExchangeCurrency
+This is a Telegram-bot for converting currencies. You can find it by name "MyBot". To start working with it you need to enter the commands in next format: /start or /help . When you enter first commands you will recieve instruction how enter the data to get information about your currencies. Also it provides you list of currencies. To see available currencies you can enter the command /currencies
