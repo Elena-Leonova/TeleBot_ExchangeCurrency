@@ -25,7 +25,11 @@ class CryptoConverter:
         except KeyError:
             raise APIException(f"It's an unknown currency {dif_currency}")
         try:
+            if float(amount) < 0:
+                raise ValueError(f'Failed to process amount: {amount}')
+
             amount = float(amount)
+
         except ValueError:
             raise APIException(f'Failed to process amount: {amount}')
         r = requests.get(f'https://min-api.cryptocompare.com/data/price?fsym={base_ticker}&tsyms={dif_currency_ticker}')
